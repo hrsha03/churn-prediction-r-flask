@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churn Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h2>Upload Customer Data CSV</h2>
+  <p class="description">Upload your CSV file to predict churn probabilities.</p>
+
+  <form id="upload-form" action="/predict" method="post" enctype="multipart/form-data">
+    <label for="file-upload" class="custom-file-upload">Select CSV File</label>
+    <input id="file-upload" type="file" name="datafile" accept=".csv" required>
+    
+    <button type="submit" id="submit-btn">Upload file</button>
+  </form>
+
+  <a href="#" id="download-link" class="hidden" download>Download prediction file</a>
+
+  <script>
+    const form = document.getElementById('upload-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const downloadLink = document.getElementById('download-link');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();  // Prevent default form submit
+      submitBtn.textContent = 'Processing...';
+      submitBtn.disabled = true;
+
+      const formData = new FormData(form);
+      fetch('/predict', { method: 'POST', body: formData })
+        .then(response => response.json())
+        .then(data => {
+          if (data.download_url) {
+            submitBtn.classList.add('hidden');
+            downloadLink.href = data.download_url;
+            downloadLink.classList.remove('hidden');
+            downloadLink.textContent = 'Download prediction file';
+          } else {
+            alert('Prediction failed. Please try again.');
+            submitBtn.textContent = 'Upload file';
+            submitBtn.disabled = false;
+          }
+        })
+        .catch(() => {
+          alert('Error occurred. Please try again.');
+          submitBtn.textContent = 'Upload file';
+          submitBtn.disabled = false;
+        });
+    });
+  </script>
+</body>
+</html>
