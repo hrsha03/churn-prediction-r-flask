@@ -1,6 +1,6 @@
-﻿CustomerID,Churn,Tenure,PreferredLoginDevice,CityTier,WarehouseToHome,PreferredPaymentMode,Gender,HourSpendOnApp,NumberOfDeviceRegistered,PreferedOrderCat,SatisfactionScore,MaritalStatus,NumberOfAddress,Complain,OrderAmountHikeFromlastYear,CouponUsed,OrderCount,DaySinceLastOrder,CashbackAmount
-50001,1,4,Mobile Phone,3,6,Debit Card,Female,3,3,Laptop & Accessory,2,Single,9,1,11,1,1,5,160
-50002,1,3,Phone,1,8,UPI,Male,3,4,Mobile,3,Single,7,1,15,0,1,0,121
-50034,0,13,Mobile Phone,3,10,E wallet,Male,3,4,Fashion,2,Divorced,8,0,11,2,2,11,209
-50033,0,30,Phone,1,15,CC,Female,3,4,Mobile,4,Divorced,5,1,20,1,1,0,133
-50059,0,23,Phone,1,6,Credit Card,Male,2,4,Mobile Phone,3,Divorced,3,0,15,0,1,2,137
+﻿CustomerID,,Tenure,PreferredLoginDevice,CityTier,WarehouseToHome,PreferredPaymentMode,Gender,HourSpendOnApp,NumberOfDeviceRegistered,PreferedOrderCat,SatisfactionScore,MaritalStatus,NumberOfAddress,Complain,OrderAmountHikeFromlastYear,CouponUsed,OrderCount,DaySinceLastOrder,CashbackAmount
+50001,,4,Mobile Phone,3,6,Debit Card,Female,3,3,Laptop & Accessory,2,Single,9,1,11,1,1,5,160
+50002,,3,Phone,1,8,UPI,Male,3,4,Mobile,3,Single,7,1,15,0,1,0,121
+50034,,13,Mobile Phone,3,10,E wallet,Male,3,4,Fashion,2,Divorced,8,0,11,2,2,11,209
+50033,,30,Phone,1,15,CC,Female,3,4,Mobile,4,Divorced,5,1,20,1,1,0,133
+50059,,23,Phone,1,6,Credit Card,Male,2,4,Mobile Phone,3,Divorced,3,0,15,0,1,2,137

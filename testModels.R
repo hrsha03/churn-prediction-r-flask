@@ -18,26 +18,24 @@ confusion_matrix<-function(model, testData){
   return (conf_matrix)
 }
 
-#function for F1 score
-f1_score<-function(conf_matrix){
-  # Print confusion matrix
-  print(paste("confusion matrix: ", conf_matrix))
-  
-  # Extracting confusion matrix components
+# Performance metrics for trained models
+compute_metrics <- function(conf_matrix) {
   TP <- conf_matrix$table[2, 2]  # True Positives
   FP <- conf_matrix$table[1, 2]  # False Positives
   FN <- conf_matrix$table[2, 1]  # False Negatives
   TN <- conf_matrix$table[1, 1]  # True Negatives
   
-  # Calculate Precision and Recall
+  Accuracy <- (TP + TN) / sum(conf_matrix$table)
   Precision <- TP / (TP + FP)
   Recall <- TP / (TP + FN)
-  
-  # Calculate F1 Score
   F1_Score <- 2 * (Precision * Recall) / (Precision + Recall)
+  Jaccard <- TP / (TP + FP + FN)
   
-  # Print F1 Score
+  print(paste("Accuracy: ", Accuracy))
+  print(paste("Precision: ", Precision))
+  print(paste("Recall: ", Recall))
   print(paste("F1 Score: ", F1_Score))
+  print(paste("Jaccard Index: ", Jaccard))
 }
 
 # function to plot feature importance
@@ -62,19 +60,19 @@ plot_feature_importance <- function(model) {
     theme_minimal()
 }
 
-# ANALYSIS RESULTS
+# ANALYSIS OF RESULTS
 
 # DT model
 conf_matrix1<-confusion_matrix(dt_model, testData)
-f1_score(conf_matrix1)
+compute_metrics(conf_matrix1)
 plot_feature_importance(dt_model)
 
 #RF model
 conf_matrix2<-confusion_matrix(rf_model, testData)
-f1_score(conf_matrix2)
+compute_metrics(conf_matrix2)
 plot_feature_importance(rf_model)
 
 #XGBoost model
 conf_matrix3<-confusion_matrix(xgb_model, testData)
-f1_score(conf_matrix3)
+compute_metrics(conf_matrix3)
 plot_feature_importance(xgb_model)
