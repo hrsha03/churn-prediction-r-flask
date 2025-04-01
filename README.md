@@ -5,10 +5,10 @@
 - Access localhost: [http://127.0.0.1:5000/](http://127.0.0.1:5000/)  
 
 ## Input  
-- Upload a CSV file → refer `\static` for sample data  
+- Upload a CSV file → refer `/static` for sample data  
 
 ## Output  
-- Download processed CSV file → refer `\outputs` for sample output
+- Download processed CSV file → refer `/data/output.csv` for sample output
 
 
 ## Documentation  
@@ -25,7 +25,7 @@ The framework follows a modular pipeline:
 4. **Frontend & Output** – Serve predictions via a Plumber API, integrated into a Flask-based UI, with downloadable results in CSV format.  
 
 ### Dataset  
-- **Source:** Kaggle (Refer `\data\training_dataset.csv`)  
+- **Source:** Kaggle (Refer `/data/training_dataset.csv`)  
 - **Preprocessing Steps:**  
   - Train-test split: 80:20 ratio  
   - Remove rows with null values  
@@ -40,6 +40,8 @@ The framework follows a modular pipeline:
 ![Attributes](data/doc-support/attributes-table.png)  
 
 3. **Data Pre-Processing**
+   - Rows containing null values are dropped. Users may be intimated at frontend.
+   - Categorical attributes are represented as their atomic equivalents. E.g., attribute Marital Status can be either Married or Single. So it is converted into atomic factors: MaritalStatus<Single/Married>.
 
 4. **Individual model results**
 ![indv-models](data/doc-support/model-results.png)  
@@ -62,7 +64,7 @@ The framework follows a modular pipeline:
 
 #### Understanding Confusion matrix
 
-#### Peformnace Metrics of trained models
+#### Peformance Metrics of trained models
 
 #### Feature Importance Trends
 - **Decision Tree**: Highlights key attributes for churn prediction.  
@@ -70,11 +72,11 @@ The framework follows a modular pipeline:
 - **XGBoost**: Identifies features with strong predictive power, often capturing non-linear patterns. Comparing these models helps pinpoint the most influential factors driving churn.  
 
 1. **XGBoost Model**
-   ![xgb](data/plots/Rplot_xgb)  
+   ![xgb](data/plots/Rplot_xgb.png)  
 2. **Decision Tree**
-   ![xgb](data/plots/Rplot_DT)  
+   ![xgb](data/plots/Rplot_DT.png)  
 3. **Random Forest**
-   ![xgb](data/plots/Rplot_rf)  
+   ![xgb](data/plots/Rplot_rf.png)  
 
 ## Limitations  
 - **Dependence on Data Quality**: Model accuracy is affected by the quality and completeness of input data.  
