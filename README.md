@@ -45,15 +45,15 @@ The framework follows a modular pipeline:
 
 4. **Individual model results**
    
-![indv-models](data/doc-support/model-results.png)  
+    ![indv-models](data/doc-support/model-results.png)  
 
 5. **Aggregated Prediction Result**
    
-![aggr-result](data/doc-support/prediction-result.png)  
+    ![aggr-result](data/doc-support/prediction-result.png)  
 
 6. **Sample Output file**
    
-![Sample output](data/doc-support/sample_output.png)  
+    ![Sample output](data/doc-support/sample_output.png)  
 
 
 ## Performance Analysis
