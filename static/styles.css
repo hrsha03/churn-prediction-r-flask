@@ -43,6 +43,13 @@ form {
     text-align: center;
 }
 
+.input-download-link {
+    color: #007bff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
 /* File Input Hidden */
 input[type="file"] {
     display: none;
@@ -50,7 +57,7 @@ input[type="file"] {
 
 /* File Upload Button */
 .custom-file-upload {
-    display: inline-block;
+    display: block;
     background-color: #e74c3c;
     color: #fff;
     padding: 1.25rem 3rem;
@@ -60,6 +67,7 @@ input[type="file"] {
     font-weight: bold;
     transition: background-color 0.3s ease;
     text-decoration: none;
+    position: relative;
 }
 
 .custom-file-upload:hover {
@@ -85,11 +93,35 @@ button:hover {
     background-color: #c0392b;
 }
 #download-link {
-    color: #2ecc71;
+    color: #007bff;
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 2rem;
 }
+
+  .custom-file-upload.inverted {
+    background-color: white;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+  }
+  .file-indicator {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 32px;
+    display: none;
+  }  
+  input[type="file"] {
+    display: none;
+  }
+
 
 
 /* Hidden Class Utility */
