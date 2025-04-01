@@ -44,12 +44,15 @@ The framework follows a modular pipeline:
    - Categorical attributes are represented as their atomic equivalents. E.g., attribute Marital Status can be either Married or Single. So it is converted into atomic factors: MaritalStatus<Single/Married>.
 
 4. **Individual model results**
+   
 ![indv-models](data/doc-support/model-results.png)  
 
 5. **Aggregated Prediction Result**
+   
 ![aggr-result](data/doc-support/prediction-result.png)  
 
 6. **Sample Output file**
+   
 ![Sample output](data/doc-support/sample_output.png)  
 
 
@@ -64,7 +67,11 @@ The framework follows a modular pipeline:
 
 #### Understanding Confusion matrix
 
+![conf-matrix](data/doc-support/con-matrix.png)  
+
 #### Peformance Metrics of trained models
+
+![metrics](data/doc-support/metrics.png)  
 
 #### Feature Importance Trends
 - **Decision Tree**: Highlights key attributes for churn prediction.  
@@ -72,10 +79,15 @@ The framework follows a modular pipeline:
 - **XGBoost**: Identifies features with strong predictive power, often capturing non-linear patterns. Comparing these models helps pinpoint the most influential factors driving churn.  
 
 1. **XGBoost Model**
-   ![xgb](data/plots/Rplot_xgb.png)  
+   
+   ![xgb](data/plots/Rplot_xgb.png)
+   
 2. **Decision Tree**
-   ![xgb](data/plots/Rplot_DT.png)  
+   
+   ![xgb](data/plots/Rplot_DT.png)
+   
 3. **Random Forest**
+   
    ![xgb](data/plots/Rplot_rf.png)  
 
 ## Limitations  
