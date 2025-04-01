@@ -1,11 +1,12 @@
 # Customer Churn Analysis App
 
 ## How to Run  
+- Clone this repository
 - Run app.py: `python app.py`  
 - Access localhost: [http://127.0.0.1:5000/](http://127.0.0.1:5000/)  
 
 ## Input  
-- Upload a CSV file → refer `/static` for sample data  
+- Upload a CSV file → refer `/static/sample-input.csv` for sample data  
 
 ## Output  
 - Download processed CSV file → refer `/data/output.csv` for sample output
