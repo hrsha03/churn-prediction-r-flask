@@ -1,6 +1,11 @@
-Customer Churn analysis app
+# Customer Churn Analysis App
 
-Run app.py: python app.py
-Access localhost: (http://127.0.0.1:5000/)
-Input: csv file upload -> refer \static for sample data
-Output: download csv file from URL -> refer \outputs for sample output
+## How to Run  
+- Run app.py: `python app.py`  
+- Access localhost: [http://127.0.0.1:5000/](http://127.0.0.1:5000/)  
+
+## Input  
+- Upload a CSV file → refer `\static` for sample data  
+
+## Output  
+- Download processed CSV file → refer `\outputs` for sample output  
