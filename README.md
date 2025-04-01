@@ -11,12 +11,12 @@
 - Download processed CSV file → refer `/data/output.csv` for sample output
 
 
-## Documentation  
+# Documentation  
 
 ### Objective  
 Develop an accurate churn prediction system that helps businesses retain customers by leveraging data-driven insights to enhance decision-making and engagement strategies.  
 
-### Implementation Outline  
+## Implementation Outline  
 The framework follows a modular pipeline:  
 
 1. **Data Preprocessing** – Handle missing values, encode categorical variables, and balance data using ROSE.  
@@ -31,7 +31,7 @@ The framework follows a modular pipeline:
   - Remove rows with null values  
   - Encode categorical attributes for uniform analysis
 
-### Prediction of Churn
+## Prediction of Churn
 
 1. **Sample Input file**
 ![Sample Input](data/doc-support/sample_input.png)  
