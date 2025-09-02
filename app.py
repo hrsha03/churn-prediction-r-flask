@@ -22,7 +22,7 @@ def predict():
 
         # Run the R script
         subprocess.run([
-            r'D:\Program Files\R-4.3.2\bin\Rscript.exe', 
+            'Rscript',
             'main.R', input_path, output_path
         ], check=True)
 
@@ -38,4 +38,4 @@ def download_file():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
