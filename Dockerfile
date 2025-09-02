@@ -15,7 +15,7 @@ COPY . /app
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Install R packages
-RUN R -e "install.packages(c('readr', 'dplyr', 'tidyr'), repos='https://cloud.r-project.org/')"
+RUN R -e "install.packages(c('readr', 'dplyr', 'tidyr', 'caret'), repos='https://cloud.r-project.org/')"
 
 # Expose Flask port
 EXPOSE 5000
